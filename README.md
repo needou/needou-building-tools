@@ -1,12 +1,12 @@
 npm publish
 
 
-# tower-crane-vue
+# needou-building-tools
 
 ## setup
 ```
-npm i tower-crane-vue
-yarn add tower-crane-vue
+npm i needou-building-tools
+yarn add needou-building-tools
 ```
 ## use
 ```

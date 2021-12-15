@@ -1,13 +1,13 @@
 {
-  "name": "tower-crane-vue",
-  "version": "1.0.1",
+  "name": "needou-building-tools",
+  "version": "1.0.2",
   "private": false,
-  "main": "dist/tower-crane-vue.js",
+  "main": "dist/needou-building-tools.common.js",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "prepublish": "vue-cli-service build --target lib --name tower-crane-vue ./lib/index.js"
+    "prepublish": "vue-cli-service build --target lib --name needou-building-tools src/index.js"
   },
   "dependencies": {
     "three": "^0.135.0",
