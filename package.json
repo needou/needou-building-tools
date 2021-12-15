@@ -1,7 +1,8 @@
 {
   "name": "tower-crane-vue",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "lib/index.js",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
