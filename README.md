@@ -1,24 +1,18 @@
+npm publish
+
+
 # tower-crane-vue
 
-## Project setup
+## setup
 ```
-yarn install
+npm i tower-crane-vue
+yarn add tower-crane-vue
 ```
-
-### Compiles and hot-reloads for development
+## use
 ```
-yarn serve
+<tower-crane
+:width="500"
+:height="400"
+url="/td.fbx"
+:load-ratio="13" :wind="12" :weight="34" :margin="11" :tower-height="100" :rotation="23" :inclination="24"/>
 ```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
