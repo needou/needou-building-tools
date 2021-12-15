@@ -44,16 +44,16 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader'
 import Stats from 'three/examples/jsm/libs/stats.module'
 
-
 export default {
   name: 'TowerCrane',
-  props: ['width','height','loadRatio','wind','heightNow','weight','margin','towerHeight','rotation','inclination'],
+  props: ['width','height','url','loadRatio','wind','heightNow','weight','margin','towerHeight','rotation','inclination'],
   data() {
     return {
       step: 0,
       scene:null,
       winWidth:500,
       winHeight:300,
+      objUrl:'',
       data0:0,
       data1:0,
       data2:0,
@@ -87,6 +87,7 @@ export default {
       this.data4 = this.towerHeight
       this.data5 = this.rotation
       this.data6 = this.inclination
+      this.objUrl = this.url
     },
     initScene() {
       this.scene = new THREE.Scene()
@@ -132,7 +133,7 @@ export default {
       document.querySelector('#status').appendChild(this.stats['dom'])
     },
     initModel() {
-      const url = '/td.fbx'
+      const url =  this.objUrl
       const fbxLoader = new FBXLoader()
       fbxLoader.load(
           url,

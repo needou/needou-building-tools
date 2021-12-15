@@ -1,12 +1,13 @@
 {
   "name": "tower-crane-vue",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
-  "main": "lib/index.js",
+  "main": "dist/tower-crane-vue.js",
   "scripts": {
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "prepublish": "vue-cli-service build --target lib --name tower-crane-vue ./lib/index.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
