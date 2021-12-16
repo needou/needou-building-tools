@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <tower-crane
-        :width="500"
-        :height="400"
+        :width="900"
+        :height="500"
         url="/td.fbx"
         :load-ratio="13" :wind="12" :weight="34" :margin="11" :tower-height="100" :rotation="23" :inclination="24"/>
     <elevator />
@@ -10,8 +10,8 @@
 </template>
 
 <script>
-//import TowerCrane from './components/TowerCrane.vue'
-import {TowerCrane,Elevator} from '../dist/needou-building-tools.common.js'
+import {TowerCrane,Elevator} from './index'
+//import {TowerCrane,Elevator} from '../dist/needou-building-tools.common.js'
 export default {
   name: 'App',
   components: {

@@ -112,13 +112,14 @@ export default {
     },
 
     initRender() {
-      this.renderer = new THREE.WebGLRenderer({ antialias: true })
+      this.renderer = new THREE.WebGLRenderer({ antialias: true,alpha:true })
       this.renderer.setSize(this.winWidth, this.winHeight)
       // 告诉渲染器需要阴影效果
       this.renderer.shadowMap.enabled = true
       this.renderer.shadowMap.type = THREE.PCFSoftShadowMap
       // 设置背景色
-      this.renderer.setClearColor(new THREE.Color(0x000000))
+      //this.renderer.setClearColor(new THREE.Color('0x00000000'))
+      this.renderer.setClearAlpha(0.0);
       document.querySelector('#container').appendChild(this.renderer.domElement)
 
     },
@@ -146,9 +147,11 @@ export default {
             //         }
             //     }
             // })
-            object.position.set(0,0,0)
+            object.position.set(0,30,0)
             object.scale.set(0.02, 0.02, 0.02)
+            this.tower = object
             this.scene.add(object)
+
           },
           (xhr) => {
             console.log((xhr.loaded / xhr.total) * 100 + '% loaded')
@@ -199,14 +202,13 @@ export default {
 .my-box{
   width: 100%;
   padding: 0;
-  background: #2c3e50;
-  margin: 0 auto;
+  margin: 0;
 }
 .pos1{
   position: absolute;
-  left: 10px;
-  top: 10px;
-  background: rgba(16,33,56,1);
+  left: 10%;
+  top: 10%;
+  background: rgba(16,33,56,0.8);
   color: #fff;
   padding: 5px 20px;
   line-height: 24px;
@@ -218,9 +220,9 @@ export default {
 }
 .pos2{
   position: absolute;
-  right: 10px;
-  top: 10px;
-  background: rgba(16,33,56,1);
+  right: 10%;
+  top: 10%;
+  background: rgba(16,33,56,0.8);
   color: #fff;
   padding: 5px 20px;
   line-height: 24px;
@@ -232,9 +234,9 @@ export default {
 }
 .pos3{
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  background: rgba(16,33,56,1);
+  left: 10%;
+  bottom: 10%;
+  background: rgba(16,33,56,0.8);
   color: #fff;
   padding: 5px 20px;
   line-height: 24px;
@@ -253,9 +255,9 @@ export default {
 }
 .pos4{
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  background: rgba(16,33,56,1);
+  right: 10%;
+  bottom: 10%;
+  background: rgba(16,33,56,0.8);
   color: #fff;
   padding: 5px 20px;
   line-height: 24px;
